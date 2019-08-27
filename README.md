@@ -1,0 +1,1 @@
+Basic Spring Web App that uses Vanilla JPA and performs mapping in H2 database(old school book and author example)
