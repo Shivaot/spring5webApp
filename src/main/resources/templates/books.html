@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Spring Framework guru</title>
+</head>
+<body>
+<h1><center>Book List</center></h1><br><br><br>
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Publisher</th>
+    </tr>
+
+    <tr th:each="book: ${books}">
+        <td th:text="${book.id}">123</td>
+        <td th:text="${book.title}">Spring in action</td>
+        <td th:text="${book.publisher.name}">Wrox</td>
+    </tr>
+</table>
+</body>
+</html>
